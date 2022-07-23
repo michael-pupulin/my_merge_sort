@@ -1,7 +1,7 @@
 # my_merge_sort
-A super simple addition to the MergeSort algorithm presented in the book "Hands on Scala". I've altered the function in the book to take an array of class Any and then perform the algorithm, where it was previously hardcoded to only take arrays of Ints. With this modification we can sort arrays of all numeric types as well as strings -- provided of course the strings contain numbers.
+A simple addition to the MergeSort algorithm presented in the book "Hands on Scala". I've altered the function in the book to take an array of class Any and then perform the algorithm, where it was previously hardcoded to only take arrays of Ints. With this modification we can sort arrays of all numeric types as well as strings -- provided of course the strings contain numbers.
 
-The addition required the ability to compare two array elements that are of class any, as the less than operator is not a member of class Any. So in the pattern matching step,
+The addition required the ability to compare two array elements that are of class any, which cannot be done directly as the less than operator is not a member of class Any. So in the pattern matching step,
 
 case (true, true) => sortedLeft(leftIdx) < sortedRight(rightIdx),
 
