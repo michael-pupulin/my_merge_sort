@@ -11,9 +11,10 @@ case (true, true) => sortedLeft(leftIdx).toString.toDouble < sortedRight(rightId
 
 I am not sure if going from Any -> String -> Double is a good idea for all input types.
 
-To return an array of type double, assuming our result is an array named "result", I would then do 
+Basic use case:
 
-result.map(i => i.toString.toDouble) 
+mysort(Array("3", -6, 8.0, BigInt(1234567890), BigDecimal(123456.789)))
+  > res1: Array[Any] = Array(-6, 3, 8.0, 123456.789, 1234567890)
 
 
 
